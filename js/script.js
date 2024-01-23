@@ -8,6 +8,12 @@ const app = createApp({
             tasks,
 
         }
+    },
+    methods: {
+        deleteTask(id){
+            const newTasks = this.tasks.filter( task => id !== task.id)
+            this.tasks = newTasks
+        }
     }
 })
 
