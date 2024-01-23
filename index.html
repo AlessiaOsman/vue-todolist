@@ -63,6 +63,12 @@
                         <i class="fa-solid fa-plus"></i>
                     </button>
                 </div>
+                <!--Buttons per azioni massive-->
+                <div class="btn-group" role="group" aria-label="Basic mixed styles example d-flex justify-content-between mb-3">
+                    <button type="button" class="btn btn-danger" @click="deleteAllTask">Elimina tutto</button>
+                    <button type="button" class="btn btn-warning" @click="setADoneValue(false)">Tutti da fare</button>
+                    <button type="button" class="btn btn-success" @click="setADoneValue(true)">Tutti fatti</button>
+                  </div>
                 <h2 class="text-center" v-show="!tasks.length">Non hai nessun task</h2>
             </div>
         </div>

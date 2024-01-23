@@ -6,7 +6,7 @@ const tasks = [
     },
     { 
         id: 2, 
-        done: true, 
+        done: false, 
         text: 'Lavare i capelli' 
     },
     { 

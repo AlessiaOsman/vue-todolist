@@ -19,11 +19,19 @@ const app = createApp({
         addTask(){
             const newTask = {
                 id: new Date().toISOString(),
-                done: true,
+                done: false,
                 text: this.newTaskText
             }
             this.tasks.push(newTask)
             this.newTaskText = ''
+        },
+
+        deleteAllTask(){
+            this.tasks = []
+        },
+
+        setADoneValue(value){
+            this.tasks.forEach(task => task.done = value)
         }
     }
 })
