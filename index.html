@@ -41,9 +41,15 @@
 
                     <!--Stampare all'interno di una lista HTML un item per ogni todo.-->
                     <li v-for="task in tasks" class="list-group-item d-flex justify-content-between">
-
+                        <div class="form-check">
+                           <!--Aggiunto check-box-->
+                            <label class="form-check-label" :class="{'text-decoration-line-through': task.done}">
+                                <input class="form-check-input" type="checkbox" v-model="task.done">
+                                {{task.text}}
+                            </label>
+                          </div>
                         <!--Se la proprietà done è uguale a true visualizzo il testo barrato-->
-                        <span :class="{'text-decoration-line-through': task.done}">{{task.text}}</span>
+                        
 
                         <!--Visualizzare a fianco ad ogni item ha una "x": cliccando su di essa, il todo viene rimosso dalla lista-->
                         <span @click="deleteTask(task.id)" role="button">X</span>
