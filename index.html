@@ -33,11 +33,13 @@
                 <h2 class="text-center">Cose da fare</h2>
                 <!--List-->
                 <ul class="list-group">
-                    <li class="list-group-item">An item</li>
-                    <li class="list-group-item">A second item</li>
-                    <li class="list-group-item">A third item</li>
-                    <li class="list-group-item">A fourth item</li>
-                    <li class="list-group-item">And a fifth one</li>
+
+                <!--Stampare all'interno di una lista HTML un item per ogni todo.-->
+                    <li v-for="task in tasks" class="list-group-item">
+                        
+                <!--Se la proprietà done è uguale a true visualizzo il testo barrato-->
+                        <span :class="{'text-decoration-line-through': task.done}">{{task.text}}</span>
+                    </li>
                 </ul>
             </div>
         </div>
